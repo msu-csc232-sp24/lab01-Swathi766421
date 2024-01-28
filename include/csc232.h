@@ -18,7 +18,7 @@
 #define TRUE 1
 
 #define FINISHED_PART_1 TRUE
-#define FINISHED_PART_2 FALSE
+#define FINISHED_PART_2 TRUE
 #define FINISHED_PART_3 FALSE
 
 #include <algorithm>
@@ -86,6 +86,11 @@ double gradeBook[NUM_COURSES][ROSTER_SIZE];
 // TODO: 2.2 Declare function named as specified that specifies three parameters. The first parameter is an integer
 //  that corresponds to the number of rows in the given table, the second parameter is an integer that corresponds to
 //  the number of columns in the table, and the third parameter is for a two-dimensional array of double values.
+
+double maxGrade(int num_elements,double array[]);
+
+
+int indexOfMaxGrade(int num_rows, int num_columns, double arrays[][NUM_COURSES]);
 
 // TODO: 3.1 - Implement the specified function below
 
