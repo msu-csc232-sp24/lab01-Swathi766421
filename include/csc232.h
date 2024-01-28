@@ -19,7 +19,7 @@
 
 #define FINISHED_PART_1 TRUE
 #define FINISHED_PART_2 TRUE
-#define FINISHED_PART_3 FALSE
+#define FINISHED_PART_3 TRUE
 
 #include <algorithm>
 #include <cassert>
@@ -96,6 +96,32 @@ int indexOfMaxGrade(int num_rows, int num_columns, double arrays[][NUM_COURSES])
 
 
 // TODO: 3.2 Implement the specified function below
+
+double maxGrade(int num_elements, double array[]){
+        int max = 0;
+        for (int i = 0; i<num_elements; i++){
+            if (array[max] < array[i]){
+                max = i;
+            }
+        }
+        return array[max];
+    }
+
+
+    int indexOfMaxGrade(int num_rows, int num_columns, double arrays[][ROSTER_SIZE]){
+        int num_rows_max = 0;
+        int num_columns_max = 0;
+        for (int i=0; i< num_rows; i++){
+            for (int j=0; j<num_columns; j++){
+                if (arrays[num_rows_max][num_columns_max]< arrays[i][j]){
+                    num_columns_max = j;
+                    num_rows_max = i;
+                }
+            }
+
+        }
+        return num_rows_max;
+    }
 
 
 #endif // MSU_CSC232_H_
